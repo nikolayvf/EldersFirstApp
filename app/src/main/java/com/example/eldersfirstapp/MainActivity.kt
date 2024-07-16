@@ -41,6 +41,12 @@ class MainActivity : ComponentActivity() {
 
             }
         }
+        binding.button.setOnClickListener {
+            if (binding.searchView.toString() != "") {
+                viewModel.getSearchResults(binding.searchView.toString())
+            }
+        }
+
 
     }
 

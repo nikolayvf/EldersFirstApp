@@ -21,12 +21,12 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
     fun getSearchResults(query: String) {
         viewModelScope.launch{
             try {
-                //val results = repository.getItems(query)
-                //_data.emit(results)
+
                 val results = repository.getItems(query)
                 _data.emit(results)
             } catch (e:Throwable){
                 //TODO: error handling
+
             }
 
         }
